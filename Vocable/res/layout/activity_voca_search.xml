@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/black" >
+
+    <include
+        android:id="@+id/top_layout"
+        android:layout_height="@dimen/dimen85"
+        android:layout_width="match_parent"
+        layout="@layout/voca_top" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/relativeLayout1"
+        android:layout_below="@+id/top_layout"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/logo_view1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:paddingTop="@dimen/dimen20"
+            android:src="@drawable/p_logo1" />
+
+        <RelativeLayout
+            android:id="@+id/searhc_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dimen40"
+            android:layout_marginBottom="@dimen/dimen5"
+            android:layout_marginTop="@dimen/dimen10" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dimen10"
+                android:paddingRight="@dimen/dimen10" >
+
+                <EditText
+                    android:id="@+id/search_edit"
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="@dimen/dimen10"
+                    android:layout_weight="5.0"
+                    android:background="@android:color/white"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingLeft="@dimen/dimen10"
+                    android:paddingRight="@dimen/dimen10" />
+
+                <ImageButton
+                    android:id="@+id/search_btn"
+                    android:layout_width="1dp"
+                    android:layout_height="@dimen/dimen40"
+                    android:layout_weight="1.5"
+                    android:background="@drawable/selector_search_btn2" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/logo_view2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:src="@drawable/p_logo2" />
+
+        <LinearLayout
+            android:id="@+id/note_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@android:color/black"
+            android:paddingBottom="@dimen/dimen10"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/note_word_txt"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="@dimen/dimen10"
+                android:layout_marginRight="@dimen/dimen10"
+                android:layout_weight="1.0"
+                android:background="@drawable/word_back"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@android:color/black"
+                android:textSize="20.0sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/note_meaning_txt"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/dimen5"
+                android:layout_marginLeft="@dimen/dimen10"
+                android:layout_marginRight="@dimen/dimen10"
+                android:layout_weight="1.0"
+                android:background="@drawable/mean_back"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@android:color/black"
+                android:textSize="20.0sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/note_synonym_txt"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/dimen5"
+                android:layout_marginLeft="@dimen/dimen10"
+           
+                android:layout_marginRight="@dimen/dimen10"
+                android:layout_weight="1.0"
+                android:background="@drawable/mean_back"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@android:color/black"
+                android:textSize="20.0sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dimen85"
+        android:layout_alignParentBottom="true" >
+
+        <include
+            android:id="@+id/bottom_layout"
+            android:layout_height="@dimen/dimen85"
+            android:layout_width="match_parent"
+            layout="@layout/voca_bottom" />
+    </RelativeLayout>
+
+</RelativeLayout>

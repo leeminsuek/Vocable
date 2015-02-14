@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">VocaProject</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="main_btn_txt1">F O U N D A T I O N</string>
+    <string name="main_btn_txt2">I N T R O D U C T I O N</string>
+    <string name="main_btn_txt3">C O M P L E T I O N</string>
+    <string name="title_activity_voca_level">VocaLevelActivity</string>
+    <string name="level_txt1">VOCABULARY</string>
+    <string name="level_txt2">SELF TEST</string>
+    <string name="level_txt3">MY VOCAB</string>
+    <string name="title_activity_voca_day">VocaDayActivity</string>
+    <string name="title_activity_voca_note">VocaNoteActivity</string>
+    <string name="homepage_url">http://www.patrick-english.com</string>
+    <string name="facebook_url">https://www.facebook.com/Able8090</string>
+    <string name="youtube_url">http://www.youtube.com/channel/UCY7at5GDdkmnIeo_8BY8yfQ</string>
+    <string name="naver_blog_url">http://blog.naver.com/goodboypat</string>
+    <string name="daum_cafe_url">http://cafe.daum.net/goodboypat</string>
+</resources>

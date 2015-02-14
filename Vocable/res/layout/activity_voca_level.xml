@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/black" >
+
+    <include
+        android:id="@+id/top_layout"
+        android:layout_height="@dimen/dimen85"
+        android:layout_width="match_parent"
+        layout="@layout/voca_top" />
+
+    <ImageButton
+        android:id="@+id/level_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dimen75"
+        android:layout_below="@id/top_layout"
+        android:layout_marginBottom="@dimen/dimen5"
+        android:layout_marginLeft="@dimen/dimen10"
+        android:layout_marginRight="@dimen/dimen10"
+        android:layout_marginTop="@dimen/dimen10"
+        android:background="@drawable/c_main_title" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/level_btn"
+        android:orientation="vertical" >
+
+        <ImageButton
+            android:id="@+id/level_btn1"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="@dimen/dimen5"
+            android:layout_marginLeft="@dimen/dimen10"
+            android:layout_marginRight="@dimen/dimen10"
+            android:layout_weight="85"
+            android:background="@drawable/c_main_btn1" />
+
+        <ImageButton
+            android:id="@+id/level_btn2"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="@dimen/dimen5"
+            android:layout_marginLeft="@dimen/dimen10"
+            android:layout_marginRight="@dimen/dimen10"
+            android:layout_weight="85"
+            android:background="@drawable/c_main_btn2" />
+
+        <ImageButton
+            android:id="@+id/level_btn3"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="@dimen/dimen10"
+            android:layout_marginLeft="@dimen/dimen10"
+            android:layout_marginRight="@dimen/dimen10"
+            android:layout_weight="85"
+            android:background="@drawable/c_main_btn3" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dimen85"
+            android:background="@drawable/footer" >
+
+            <include
+                android:id="@id/bottom_layout"
+                android:layout_height="@dimen/dimen85"
+        android:layout_width="match_parent"
+                layout="@layout/voca_bottom" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

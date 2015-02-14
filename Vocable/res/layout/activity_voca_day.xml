@@ -1,0 +1,260 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black" >
+
+    <include
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen85"
+        layout="@layout/voca_top" />
+
+    <ImageButton
+        android:id="@+id/level_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen75"
+        android:layout_below="@+id/top_layout"
+        android:layout_marginBottom="@dimen/dimen5"
+        android:layout_marginLeft="@dimen/dimen10"
+        android:layout_marginRight="@dimen/dimen10"
+        android:layout_marginTop="@dimen/dimen10"
+        android:background="@drawable/f_main_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/relativeLayout1"
+        android:layout_below="@+id/level_btn"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen5"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:paddingLeft="@dimen/dimen10"
+            android:paddingRight="@dimen/dimen10" >
+
+            <com.voca.vocable.VocaDayButton
+                android:id="@+id/btn1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/dimen5"
+                android:layout_weight="1"
+                android:background="@drawable/d_btn" />
+
+            <com.voca.vocable.VocaDayButton
+                android:id="@+id/btn2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/dimen5"
+                android:layout_weight="1"
+                android:background="@drawable/d_btn" />
+
+            <com.voca.vocable.VocaDayButton
+                android:id="@+id/btn3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/dimen5"
+                android:layout_weight="1"
+                android:background="@drawable/d_btn" />
+
+            <com.voca.vocable.VocaDayButton
+                android:id="@+id/btn4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/d_btn" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen5"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:paddingLeft="@dimen/dimen10"
+            android:paddingRight="@dimen/dimen10" >
+
+            <com.voca.vocable.VocaDayButton
+                android:id="@+id/btn5"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/dimen5"
+                android:layout_weight="1"
+                android:background="@drawable/d_btn" />
+
+            <com.voca.vocable.VocaDayButton
+                android:id="@+id/btn6"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/dimen5"
+                android:layout_weight="1"
+                android:background="@drawable/d_btn" />
+
+            <com.voca.vocable.VocaDayButton
+                android:id="@+id/btn7"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/dimen5"
+                android:layout_weight="1"
+                android:background="@drawable/d_btn" />
+
+            <com.voca.vocable.VocaDayButton
+                android:id="@+id/btn8"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/d_btn" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen5"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:paddingLeft="@dimen/dimen10"
+            android:paddingRight="@dimen/dimen10" >
+
+            <com.voca.vocable.VocaDayButton
+                android:id="@+id/btn9"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/dimen5"
+                android:layout_weight="1"
+                android:background="@drawable/d_btn" />
+
+            <com.voca.vocable.VocaDayButton
+                android:id="@+id/btn10"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/dimen5"
+                android:layout_weight="1"
+                android:background="@drawable/d_btn" />
+
+            <com.voca.vocable.VocaDayButton
+                android:id="@+id/btn11"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/dimen5"
+                android:layout_weight="1"
+                android:background="@drawable/d_btn" />
+
+            <com.voca.vocable.VocaDayButton
+                android:id="@+id/btn12"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/d_btn" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen5"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:paddingLeft="@dimen/dimen10"
+            android:paddingRight="@dimen/dimen10" >
+
+            <com.voca.vocable.VocaDayButton
+                android:id="@+id/btn13"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/dimen5"
+                android:layout_weight="1"
+                android:background="@drawable/d_btn" />
+
+            <com.voca.vocable.VocaDayButton
+                android:id="@+id/btn14"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/dimen5"
+                android:layout_weight="1"
+                android:background="@drawable/d_btn" />
+
+            <com.voca.vocable.VocaDayButton
+                android:id="@+id/btn15"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/dimen5"
+                android:layout_weight="1"
+                android:background="@drawable/d_btn" />
+
+            <com.voca.vocable.VocaDayButton
+                android:id="@+id/btn16"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/d_btn" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen5"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:paddingLeft="@dimen/dimen10"
+            android:paddingRight="@dimen/dimen10" >
+
+            <com.voca.vocable.VocaDayButton
+                android:id="@+id/btn17"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/dimen5"
+                android:layout_weight="1"
+                android:background="@drawable/d_btn" />
+
+            <com.voca.vocable.VocaDayButton
+                android:id="@+id/btn18"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/dimen5"
+                android:layout_weight="1"
+                android:background="@drawable/d_btn" />
+
+            <com.voca.vocable.VocaDayButton
+                android:id="@+id/btn19"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/dimen5"
+                android:layout_weight="1"
+                android:background="@drawable/d_btn" />
+
+            <com.voca.vocable.VocaDayButton
+                android:id="@+id/btn20"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/d_btn" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/choose_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen40"
+            android:layout_marginBottom="@dimen/dimen10"
+            android:layout_marginLeft="@dimen/dimen10"
+            android:layout_marginRight="@dimen/dimen10"
+            android:background="@drawable/ch_btn" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <include
+            android:id="@+id/bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen85"
+            layout="@layout/voca_bottom" />
+    </RelativeLayout>
+
+</RelativeLayout>

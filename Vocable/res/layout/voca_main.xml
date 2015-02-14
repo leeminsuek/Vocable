@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black" >
+
+    <include
+        android:id="@+id/top_layout"
+        android:layout_height="@dimen/dimen85"
+        android:layout_width="match_parent"
+        layout="@layout/voca_top" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top_layout"
+        android:orientation="vertical" >
+
+        <ImageButton
+            android:id="@+id/header_btn"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="@dimen/dimen5"
+            android:layout_marginLeft="@dimen/dimen10"
+            android:layout_marginRight="@dimen/dimen10"
+            android:layout_marginTop="@dimen/dimen10"
+            android:layout_weight="85"
+            android:background="@drawable/header" />
+
+        <Button
+            android:id="@+id/f_btn"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="@dimen/dimen5"
+            android:layout_marginLeft="@dimen/dimen10"
+            android:layout_marginRight="@dimen/dimen10"
+            android:layout_weight="85"
+            android:background="@drawable/main_btn1" />
+
+        <android.widget.Button
+            android:id="@+id/i_btn"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="@dimen/dimen5"
+            android:layout_marginLeft="@dimen/dimen10"
+            android:layout_marginRight="@dimen/dimen10"
+            android:layout_weight="85.0"
+            android:background="@drawable/main_btn2" />
+
+        <android.widget.Button
+            android:id="@+id/c_btn"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="@dimen/dimen5"
+            android:layout_marginLeft="@dimen/dimen10"
+            android:layout_marginRight="@dimen/dimen10"
+            android:layout_weight="85.0"
+            android:background="@drawable/main_btn3" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="@dimen/dimen10"
+            android:layout_marginLeft="@dimen/dimen10"
+            android:layout_marginRight="@dimen/dimen10"
+            android:layout_weight="85.0"
+            android:orientation="horizontal" >
+		    <android.widget.ImageButton
+                android:id="@+id/home_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/dimen5"
+                android:layout_weight="1"
+                android:background="@drawable/selector_home_btn" />
+
+            <android.widget.ImageButton
+                android:id="@+id/search_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/dimen5"
+                android:layout_weight="1.0"
+                android:background="@drawable/selector_search_btn" />
+
+            <android.widget.ImageButton
+                android:id="@+id/menual_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/selector_menual_btn" />
+        
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen85"
+            android:background="@drawable/footer" >
+
+            <include
+                android:id="@+id/bottom_layout"
+                android:layout_height="@dimen/dimen85"
+        android:layout_width="match_parent"
+                layout="@layout/voca_bottom" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>
