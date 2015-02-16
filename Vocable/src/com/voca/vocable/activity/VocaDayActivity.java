@@ -26,16 +26,28 @@ public class VocaDayActivity extends VocaActivity {
 	private ImageButton mLevelBtn;
 	private ImageButton mChooseBtn;
 	private VocaDayButton mBtn1,mBtn2,mBtn3,mBtn4,mBtn5,mBtn6,mBtn7,mBtn8,mBtn9,mBtn10,mBtn11,mBtn12,mBtn13,mBtn14,mBtn15,mBtn16,mBtn17,mBtn18,mBtn19,mBtn20;
+	/**
+	 * 날짜버튼어레이
+	 */
 	private ArrayList<VocaDayButton> mBtnArray;
+	/**
+	 * 선택한 날짜에 대한 단어리스트 어레이
+	 */
 	private ArrayList<VocaNote> mVocaNoteArray;
+	/**
+	 * 각 날짜별로 저장된 단어 갯수 어레이
+	 */
 	private ArrayList<Integer> mNoteCntArray;
 
+	/**
+	 * 단어 레벨
+	 */
 	private int mLevel;
+	/**
+	 * vocableation, test, my vocab구분
+	 */
 	private int mGubun;
 
-	private StateListDrawable mStates1 = new StateListDrawable();
-	private StateListDrawable mStates2 = new StateListDrawable();
-	private StateListDrawable mStates3 = new StateListDrawable();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -104,23 +116,6 @@ public class VocaDayActivity extends VocaActivity {
 						}
 					}
 
-//					//테스트일때만
-//					if(mGubun == 2) {
-//						//터치 이미지 지정
-//						if(mLevel == 1) {
-//							mBtnArray.get(i).setSelectorImage(R.drawable.d_blue_btn);
-//						}
-//						else if(mLevel == 2) {
-//							mBtnArray.get(i).setSelectorImage(R.drawable.d_yel_btn);
-//						}
-//						else {
-//							mBtnArray.get(i).setSelectorImage(R.drawable.d_red_btn);
-//						}
-//						mBtnArray.get(i).setTouchYn(true);
-//					}
-//					else {
-//						mBtnArray.get(i).setTouchYn(false);
-//					}
 				}
 			}	
 		} catch (Exception e) {
@@ -352,6 +347,7 @@ public class VocaDayActivity extends VocaActivity {
 			int tag = (Integer) v.getTag();
 
 
+			//my vocab
 			if(mGubun == 3) {
 				if(mNoteCntArray.get(tag-1) == 0) {
 					showToast("해당일에 저장된 단어가 없습니다.");
@@ -364,6 +360,7 @@ public class VocaDayActivity extends VocaActivity {
 					toActivity(intent);
 				}
 			}
+			//test
 			else if(mGubun == 2) {
 				VocaDayButton button = (VocaDayButton) v;
 				button.toggleCheckYn();

@@ -14,6 +14,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnTouchListener;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -26,7 +27,7 @@ import com.voca.vocable.vo.VocaNote;
 public class VocaNoteActivity extends VocaActivity implements OnInitListener {
 
 
-	private ImageButton mLevelBtn;
+	private Button mLevelBtn;
 	private ImageButton mSaveBtn;
 	private ImageButton mDeleteBtn;
 
@@ -41,7 +42,13 @@ public class VocaNoteActivity extends VocaActivity implements OnInitListener {
 //	private RelativeLayout mSynonymLayout;
 //	private RelativeLayout mMeaningLayout;Z
 
+	/**
+	 * 단어 레벨 구분
+	 */
 	private int mLevel;
+	/**
+	 * vocableation, test, my vocab 구분
+	 */
 	private int mGubun;
 	private int mDays;
 	private int mPageCnt;
@@ -60,6 +67,7 @@ public class VocaNoteActivity extends VocaActivity implements OnInitListener {
 		init();
 		initHeader();
 		
+		//날짜를 여러개 선택해서 들어온경우
 		if(mDays == -1) {
 			mVocaNoteArray = (ArrayList<VocaNote>) getIntent().getSerializableExtra("items");
 		}
@@ -77,6 +85,10 @@ public class VocaNoteActivity extends VocaActivity implements OnInitListener {
 			if(mVocaNoteArray != null && mVocaNoteArray.size() > 0) {
 				VocaNote note = mVocaNoteArray.get(mPageCnt);
 
+				
+				
+				mLevelBtn.setText("DAY "+note.getDays());
+				
 				mWordTxt.setText(note.getWord());
 				mMeaningTxt.setText(note.getMeaning());
 
@@ -111,7 +123,7 @@ public class VocaNoteActivity extends VocaActivity implements OnInitListener {
 			mGubun = intent.getExtras().getInt("gubun");
 			mDays = intent.getExtras().getInt("days");
 
-			mLevelBtn = (ImageButton) findViewById(R.id.level_btn);
+			mLevelBtn = (Button) findViewById(R.id.level_btn);
 			mSaveBtn = (ImageButton) findViewById(R.id.note_save_btn);
 			mDeleteBtn = (ImageButton) findViewById(R.id.note_delete_btn);
 			mNextBtn = (ImageButton) findViewById(R.id.note_next_btn);
@@ -171,8 +183,18 @@ public class VocaNoteActivity extends VocaActivity implements OnInitListener {
 				mMeaningTxt.setOnTouchListener(mLayoutTouchListener);
 				mSynonymTxt.setOnTouchListener(mLayoutTouchListener);
 			}
+			
 
-			mLevelBtn.setBackgroundResource(VocaCommon.getInstance().mResourceArray.get(mLevel-1).getRecousrceImage());
+			if(mLevel == 1) {
+				mLevelBtn.setBackgroundResource(R.drawable.d_blue_btn);				
+			}
+			else if(mLevel == 2) {
+				mLevelBtn.setBackgroundResource(R.drawable.d_yel_btn);				
+			}
+			else {
+				mLevelBtn.setBackgroundResource(R.drawable.d_red_btn);				
+			}
+
 //			String levelText =mResourceArray.get(mLevel-1).getRecourceString() + " DAY - " + mDays; 
 //			mLevelBtn.setText(levelText);
 
