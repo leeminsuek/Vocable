@@ -11,20 +11,19 @@ import android.os.Handler;
 import com.voca.vocable.activity.VocaMainActivity;
 import com.voca.vocable.db.VocaDatabaseAdapter;
 
-public class Vocable
-extends Activity
-{
-	private void toMainActivity()
-	{
+public class Vocable extends Activity {
+	/**
+	 * 메인액티비티 띄우기
+	 */
+	private void toMainActivity() {
 		startActivity(new Intent(this, VocaMainActivity.class));
 		finish();
-		overridePendingTransition(2130968576, 2130968577);
+		overridePendingTransition(R.anim.alpha, R.anim.alpha2);
 	}
 
 	public void onBackPressed() {}
 
-	protected void onCreate(Bundle paramBundle)
-	{
+	protected void onCreate(Bundle paramBundle) {
 		super.onCreate(paramBundle);
 		setContentView(R.layout.activity_vocable);
 		AsyncTask<Void, Void, Void> sql = new AsyncTask<Void, Void, Void>()
@@ -39,11 +38,9 @@ extends Activity
 				}
 				catch (SQLException localSQLException)
 				{
-					for (;;)
-					{
 						localSQLException.printStackTrace();
-					}
 				}
+				return null;
 			}
 
 			protected void onPostExecute(Void paramAnonymousVoid)
@@ -53,11 +50,13 @@ extends Activity
 				{
 					public void run()
 					{
+						
+						//디비정보를 받았으면 
 						if (VocaDatabaseAdapter.CREATE_YN) {
 							Vocable.this.toMainActivity();
 						}
-						else
-						{
+						//디비정보가 이미 한번 만들어졌으면 2.5초뒤에 메인화면으로
+						else {
 							new Handler().postDelayed(new Runnable()
 							{
 								public void run()

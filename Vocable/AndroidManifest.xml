@@ -49,6 +49,11 @@
             android:label="@string/title_activity_voca_note"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         </activity>
+          <activity
+            android:name="com.voca.vocable.activity.VocaMenualActivity"
+            android:label="@string/title_activity_voca_note"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
     </application>
 
 </manifest>

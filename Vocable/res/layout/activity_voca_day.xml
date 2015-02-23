@@ -27,6 +27,7 @@
         android:layout_above="@+id/relativeLayout1"
         android:layout_below="@+id/level_btn"
         android:gravity="center"
+        android:paddingBottom="@dimen/dimen10"
         android:orientation="vertical" >
 
         <LinearLayout
@@ -238,7 +239,6 @@
             android:id="@+id/choose_btn"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dimen40"
-            android:layout_marginBottom="@dimen/dimen10"
             android:layout_marginLeft="@dimen/dimen10"
             android:layout_marginRight="@dimen/dimen10"
             android:background="@drawable/ch_btn" />

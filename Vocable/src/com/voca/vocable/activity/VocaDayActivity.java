@@ -276,12 +276,29 @@ public class VocaDayActivity extends VocaActivity {
 			if(mGubun == 2) {
 				mChooseBtn.setOnClickListener(mChooseListener);
 			}
+			else {
+				mChooseBtn.setVisibility(View.GONE);
+			}
 
 			mLevelBtn.setBackgroundResource(VocaCommon.getInstance().mResourceArray.get(mLevel-1).getRecousrceImage());
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	/**
+	 * 날짜를 하나이상 선택했는지 체크
+	 */
+	private boolean isSelectedDays() {
+		
+		for(int i = 0 ; i < mBtnArray.size(); i ++) {
+			if(mBtnArray.get(i).isCheckYn() == true) { 
+				return true;
+			}
+		}
+		
+		return false;
 	}
 
 
@@ -364,6 +381,25 @@ public class VocaDayActivity extends VocaActivity {
 			else if(mGubun == 2) {
 				VocaDayButton button = (VocaDayButton) v;
 				button.toggleCheckYn();
+				
+				if(isSelectedDays()) {
+					//다시한번 버튼이 보여지는상태인지 체크
+					if(mChooseBtn.getVisibility() == View.VISIBLE) {
+						if(mLevel == 1) {
+							mChooseBtn.setBackgroundResource(R.drawable.st_b_btn);	
+						}
+						else if(mLevel == 2) {
+							mChooseBtn.setBackgroundResource(R.drawable.st_y_btn);
+						}
+						else {
+							mChooseBtn.setBackgroundResource(R.drawable.st_r_btn);
+						}
+						
+					}
+				}
+				else {
+					mChooseBtn.setBackgroundResource(R.drawable.ch_btn);
+				}
 			}
 			else {
 				Intent intent = new Intent(VocaDayActivity.this, VocaNoteActivity.class);
