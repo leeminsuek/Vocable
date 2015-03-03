@@ -18,36 +18,7 @@
             android:layout_width="@dimen/dimen60"
             android:layout_height="@dimen/dimen60"
             android:layout_gravity="center"
-            android:layout_marginRight="@dimen/dimen5"
-            android:background="@drawable/s_btn_1" />
-    </FrameLayout>
-
-    <FrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
-        android:layout_weight="1" >
-
-        <ImageButton
-            android:id="@+id/youtube_btn"
-            android:layout_width="@dimen/dimen60"
-            android:layout_height="@dimen/dimen60"
-            android:layout_gravity="center"
-            android:layout_marginRight="@dimen/dimen5"
-            android:background="@drawable/s_btn_2" />
-    </FrameLayout>
-
-    <FrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
-        android:layout_weight="1" >
-
-        <ImageButton
-            android:id="@+id/blog_btn"
-            android:layout_width="@dimen/dimen60"
-            android:layout_height="@dimen/dimen60"
-            android:layout_gravity="center"
-            android:layout_marginRight="@dimen/dimen5"
-            android:background="@drawable/s_btn_3" />
+            android:background="@drawable/f_btn1" />
     </FrameLayout>
 
     <FrameLayout
@@ -60,7 +31,33 @@
             android:layout_width="@dimen/dimen60"
             android:layout_height="@dimen/dimen60"
             android:layout_gravity="center"
-            android:background="@drawable/s_btn_4" />
+            android:background="@drawable/f_btn3" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" >
+
+        <ImageButton
+            android:id="@+id/blog_btn"
+            android:layout_width="@dimen/dimen60"
+            android:layout_height="@dimen/dimen60"
+            android:layout_gravity="center"
+            android:background="@drawable/f_btn4" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" >
+
+        <ImageButton
+            android:id="@+id/youtube_btn"
+            android:layout_width="@dimen/dimen60"
+            android:layout_height="@dimen/dimen60"
+            android:layout_gravity="center"
+            android:background="@drawable/f_btn2" />
     </FrameLayout>
 
 </LinearLayout>

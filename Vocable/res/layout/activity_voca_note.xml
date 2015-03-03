@@ -114,26 +114,26 @@
 
             <RelativeLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_toLeftOf="@+id/note_next_btn"
                 android:layout_toRightOf="@+id/note_prev_btn" >
 
                 <ImageButton
                     android:id="@+id/note_save_btn"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:background="@drawable/selector_save_btn" />
 
                 <ImageButton
                     android:id="@+id/note_delete_btn"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:background="@drawable/selector_del_btn" />
 
                 <ImageButton
                     android:id="@+id/note_tts_btn"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:background="@drawable/selector_spk_btn" />
             </RelativeLayout>
 

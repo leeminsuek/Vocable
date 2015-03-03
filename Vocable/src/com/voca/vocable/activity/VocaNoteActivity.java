@@ -99,8 +99,8 @@ public class VocaNoteActivity extends VocaActivity implements OnInitListener {
 				
 				/*셀프 테스트, my vocab 일떄*/
 				if(mGubun == 2 || mGubun == 3) {
-					mSynonymTxt.setText("Click");
-					mMeaningTxt.setText("Click");
+					mSynonymTxt.setText("Touch");
+					mMeaningTxt.setText("Touch");
 				}
 			}
 		} catch (Exception e) {
@@ -428,7 +428,7 @@ public class VocaNoteActivity extends VocaActivity implements OnInitListener {
 					}
 		            break;
 		        case MotionEvent.ACTION_UP:
-		        	txtv.setText("Click");
+		        	txtv.setText("Touch");
 		            break;
 		        default:
 		            break;
